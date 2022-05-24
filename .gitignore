@@ -14,8 +14,6 @@
 
 #ignore any files from these folders
 .git
-.release
-.releases
 .vscode
 vendor
 

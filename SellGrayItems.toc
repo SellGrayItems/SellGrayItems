@@ -1,0 +1,8 @@
+## Interface: 20504
+## Version: v2.5.4
+## Title: Sell Gray Items
+## Notes: Adds a button to the Merchant frame that sells gray items
+## Author: Paul Davis Tutherow Jr, Serrol
+## May 24, 2022
+
+SellGrayItems.lua

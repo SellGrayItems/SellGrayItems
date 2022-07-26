@@ -78,10 +78,10 @@ eventFrame:SetScript("OnEvent",
 );
 
 -- Sets slash commands.
-SLASH_SELLGRAYS1 = "/sellgrayitems"
-SLASH_SELLGRAYS1 = "/sellgrays"
-SLASH_SELLGRAYS1 = "/sgi"
-SlashCmdList["SELLGRAYS"] = function(msg)
+SLASH_COMMANDS1 = "/sellgrayitems"
+SLASH_COMMANDS2 = "/sellgreyitems"
+SLASH_COMMANDS3 = "/sgi"
+SlashCmdList["COMMANDS"] = function(msg)
     msg = msg:lower()
     if msg == "help" or msg == "h" then
         print(AddonColor .. "Sell Gray Items:|r\n/sellgrayitems, /sellgrays, and /sgi all display the addon's settings page.")

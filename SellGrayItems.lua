@@ -1,5 +1,24 @@
 local AddonColor = "|cFF00ff99"
 
+-- Sets slash commands.
+SLASH_SELLGRAYITEMS1 = "/sellgrayitems"
+SLASH_SELLGRAYITEMS2 = "/sellgreyitems"
+SLASH_SELLGRAYITEMS3 = "/sgi"
+SlashCmdList["SELLGRAYITEMS"] = function(msg)
+    msg = msg:lower()
+    if msg == "help" or msg == "h" then
+        print(AddonColor .. "Sell Gray Items:|r\n/sellgrayitems, /sellgrays, and /sgi all display the addon's settings page.")
+        return
+    elseif msg == "version" or msg == "v" or msg == "-v" then
+        local version = GetAddOnMetadata("SellGrayItems", "Version");
+        print(AddonColor .. "Sell Grays|r version " .. version)
+        return
+    else
+        InterfaceOptionsFrame_Show();
+        InterfaceOptionsFrame_OpenToCategory("Sell Gray Items");
+    end
+end
+
 function SELLGRAYS:repair()
     local repairCost, canRepair = GetRepairAllCost();
     if (canRepair) then
@@ -76,22 +95,3 @@ eventFrame:SetScript("OnEvent",
         end
     end
 );
-
--- Sets slash commands.
-SLASH_COMMANDS1 = "/sellgrayitems"
-SLASH_COMMANDS2 = "/sellgreyitems"
-SLASH_COMMANDS3 = "/sgi"
-SlashCmdList["COMMANDS"] = function(msg)
-    msg = msg:lower()
-    if msg == "help" or msg == "h" then
-        print(AddonColor .. "Sell Gray Items:|r\n/sellgrayitems, /sellgrays, and /sgi all display the addon's settings page.")
-        return
-    elseif msg == "version" or msg == "v" or msg == "-v" then
-        local version = GetAddOnMetadata("SellGrayItems", "Version");
-        print(AddonColor .. "Sell Grays|r version " .. version)
-        return
-    else
-        InterfaceOptionsFrame_Show();
-        InterfaceOptionsFrame_OpenToCategory("Sell Gray Items");
-    end
-end

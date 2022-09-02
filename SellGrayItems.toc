@@ -1,7 +1,7 @@
 ## Interface: 30400
 ## Title: Sell Gray Items
 ## Notes: Adds a button to the Merchant frame that sells gray items; options to enable auto-sell and auto-repair
-## Version: v2.5.4
+## Version: v3.4.0
 ## Author: Fitzsimmons6, Serrol
 ## SavedVariablesPerCharacter: SELLGRAYITEMSOPTIONS
 
